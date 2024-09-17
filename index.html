@@ -22,32 +22,25 @@
       gesture-detector
       id="scene"
     >
-      <a-assets>
-        <a-asset-item
-          id="bowser"
-          src="kit.jpg"
-        >
-        </a-asset-item>
-      </a-assets>
+  <a-assets>
+    <img id="my-image" src="image.jpg">
+  </a-assets>
 
-      <a-marker
-        type="pattern"
-        url="p.patt"
-        raycaster="objects: .clickable"
-        emitevents="true"
-        cursor="fuse: false; rayOrigin: mouse;"
-        id="markerA"
-      >
-        <a-entity
-          id="bowser-model"
-          gltf-model="#bowser"
-          position="0 0 0"
-          scale="1.5 1.5 1.5"
-          class="clickable"
-          gesture-handler
-        >
-        </a-entity>
-      </a-marker>
+  <a-marker
+    type="pattern"
+    url="pattern-j.patt"
+    raycaster="objects: .clickable"
+    emitevents="true"
+    cursor="fuse: false; rayOrigin: mouse;"
+    id="markerA"
+  >
+  <a-image src="#my-image"
+    width="2"
+    height="2"
+  >
+  </a-image>
+  </a-marker>
+      
       <a-entity camera></a-entity>
     </a-scene>
   </body>
